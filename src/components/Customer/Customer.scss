@@ -1,0 +1,49 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.customer{
+    display: flex;
+    align-items: center;
+    margin-top: 180px;
+
+
+    &_data{
+        width:100%;
+        padding-right: 80px;
+
+        h1{
+            @include font-properties(36px, Manrope, 400)
+        }
+    }
+    
+    &_information{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-top: 24px;
+        padding: 16px 0px;    
+
+        .icon{
+            margin-right: 12px;
+            margin-left: 20px;
+        }
+
+        p{
+            @include font-properties(16px, $font-family, 600);
+            color: #000000;
+        }
+    }
+
+    &_img{
+        width: 100%;
+        position: relative;
+        padding-left: 20px;
+
+        .abs_img{
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            position: absolute;
+            top: 304px;
+            left: 48px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    }
+}

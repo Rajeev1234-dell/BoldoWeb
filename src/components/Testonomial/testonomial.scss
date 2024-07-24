@@ -1,0 +1,73 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.testonomial{
+    margin-top: 250px;
+    padding: 60px 0px;
+
+    &_header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_title{
+        width: 716px;
+
+        .title{
+            @include font-properties(48px, Manrope, 400);
+            color:white;
+        }
+    }
+
+    &_arrows{
+        align-self: flex-end;
+        display: flex;
+        gap: 30px;
+
+        .arrow{
+            display: flex;
+            align-items: center;
+            background-color: #FFFFFF;
+            font-size: 30px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+    }
+
+    &_cards{
+        display: flex;
+        margin-top: 80px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .card{
+            width: 350px;
+            border-radius: 12px;
+            padding: 40px;
+            background-color: #FFFFFF;
+
+            &_desc{
+                @include font-properties(24px, $font-family, 400);
+                color: #000000;
+            }
+
+            &_profile{
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .profile_name{
+                @include font-properties(16px, $font-family, 700);
+                color: #0A2640;
+            }
+
+            .profile_desc{
+                @include font-properties(14px, $font-family, 400);
+                color:#0A2640;
+                margin-top: 6px;
+            }
+        }
+    }
+}

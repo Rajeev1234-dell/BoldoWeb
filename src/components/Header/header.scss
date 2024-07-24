@@ -1,0 +1,110 @@
+@import "../../styles/variables"; 
+@import "../../styles/mixins.scss";
+
+// function for button properties ----
+@mixin button-properties($border, $border-radius, $padding-top, $padding-right, $padding-bottom, $padding-left)
+{
+    border-radius: $border-radius; 
+    padding: $padding-top $padding-right $padding-bottom $padding-left; 
+    border: $border;
+}
+
+.main-header{
+    padding-bottom: 80px;
+}
+
+header{
+    // padding-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0px;
+
+  &_logo {
+    width: 150px;
+
+    &_img {
+      width: 100%;
+      color: $white-color;
+    }
+  }
+
+  &_links{
+    display: flex;
+    align-items: center;
+
+    li{
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    a{
+        text-decoration: none;
+        color: $links-color;
+        @include font-properties(16px, $font-family-open-sans, $font-semibold);
+    }
+
+    .log-in{
+        &_button {
+            border-radius: 24px;
+            padding: 8px 40px 8px 40px;
+            @include font-properties(16px, $font-family-open-sans, $font-bold);
+            color: $primary;
+            background: $white-color;
+        }
+    }
+  }
+}
+
+.header_banner-part{
+    width:100%;
+    margin-top: 40px;
+    display: flex;
+    background-color: $primary;                           //this is represent background color
+    align-items: center;
+
+    .header-graph{
+        width:100%;
+    }
+
+    .header_description{
+        width: 100%;
+        padding-right: 87px;
+
+        &_title{
+            color:$white-color;
+            @include font-properties(48px, $font-family-open-sans, $font-regular);  
+        }
+
+        &_para{
+            color:$sea-shell;
+            @include font-properties(16px, $font-family-open-sans, $font-regular);
+            line-height: 28px;
+            margin-top: 20px;
+        }
+    }
+
+    .header-buttons{
+        margin-top: 30px;
+
+        &_buy{
+            @include button-properties(2px, 56px, 16px, 56px, 16px, 56px); 
+            margin-right: 50px;
+            background-color: $light-greenish-blue;
+            color:$primary ;
+            @include font-properties(20px, $font-family-open-sans, $font-bold);
+        }
+
+        &_explore{
+            border-radius: 56px;
+            padding: 16px 56px 16px 56px;
+            border: 2px solid $white-color;
+            background: transparent;
+            @include font-properties(20px, $font-family-open-sans, $font-bold);
+            color: $white-color;        
+        }
+    }
+}

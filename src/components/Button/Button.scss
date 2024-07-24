@@ -1,0 +1,36 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.button {
+  padding: 16px 56px 16px 56px;
+  border-radius: 56px;
+  border: 2px;
+  @include font-properties(20px, $font-family-open-sans, $font-bold);
+
+  &_primary {
+    margin-right: 50px;
+    color: $primary;
+    background-color: $light-greenish-blue;
+  }
+
+  &_primary-dark {
+    @include font-properties(20px, $font-family, 700);
+    color: #ffffff;
+    margin-top: 56px;
+    margin-left: 24px;
+    background-color: #0a2640;
+  }
+
+  &_primary-transparent{
+    margin-top: 84px;
+    color:#0A2640;  
+    background: transparent;
+    border: 2px solid #0A2640;  
+  }
+
+  &_secondary {
+    border: 2px solid $white-color;
+    background: transparent;
+    color: $white-color;
+  }
+}

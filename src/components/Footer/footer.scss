@@ -1,0 +1,102 @@
+@import "../../styles/variables";
+
+//functions for font properties -------
+@mixin font-properties($size, $weight, $family)
+{
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+}
+
+footer {
+  margin-top: 250px; 
+  
+    .footer-data
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+  .footer-desc {
+    width: 300px;
+    
+    img {
+      width: 125.25px;
+    }
+    p {
+      color: #777777;
+      @include font-properties(16px, 400, $font-family)
+    }
+    .desc {
+        margin-top: 32px;
+    }
+    .right
+    {
+        margin-top: 65px;
+    }
+  }
+  .footer-options {
+    width: 642px;
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        @include font-properties(20px, 700, $font-family);
+    }
+
+    li
+    {
+        list-style: none;
+        color:#777777;
+        margin: 32px 0px;
+        @include font-properties(20px, 400, $font-family);
+    }
+    .hire
+    {
+        padding: 3px 14px 3px 14px;
+        background-color: #65E4A3;
+        color:#0A2640;
+        border-radius: 120px;
+        @include font-properties(13px, 700, $font-family);
+    }
+  }
+  .footer-form
+  {
+    background-color: #0A2640;
+    width:100%;
+    border-radius: 12px;
+    padding: 50px 225px;
+    text-align: center;
+
+    h1
+    {
+        line-height: 82px;
+        color:#FFFFFF;
+        @include font-properties(48px, 400, Manrope)
+    }
+
+    button
+    {
+        background-color: #65E4A3;
+        border-radius: 56px;
+        border: 2px;
+        padding: 16px 56px 16px 56px;
+        color:#0A2640;
+        @include font-properties(20px, 700, $font-family);
+    }
+    input 
+    {
+        width: 370px;
+        border-radius: 240px;
+        border: 2px;
+        height: 56px;
+        @include font-properties(20px, 400, $font-family);
+        margin-right: 40px;
+        padding-left: 32px;
+    }
+    form
+    {
+        margin-top: 30px;
+    }
+  }
+}

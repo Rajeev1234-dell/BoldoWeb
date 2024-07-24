@@ -1,0 +1,49 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.connect{
+    display: flex;
+    align-items: center;
+    margin-top: 185px;
+
+    &_data{
+        width: 100%;
+        padding: 31px;
+
+        h1{
+            @include font-properties(36px, Manrope, 400);
+            margin-bottom: 40px;
+        }
+
+        li{
+            list-style: none;
+            @include font-properties(20px, $font-family, 400);
+            margin-top: 24px;
+            margin-left: 27px;
+        }
+        .tick_icon{
+            background-color: #0a2640;
+            border-radius: 10px;
+            color: white;
+            margin-right: 27px;
+        }
+        button{
+            background-color: #0a2640;
+            @include font-properties(20px, $font-family, 700);
+            color:#FFFFFF;
+            margin-top: 56px;
+            margin-left: 24px;
+        }
+    }
+
+    &_img{
+        width: 100%;
+        position: relative;
+
+        .abs_img{
+            position: absolute;
+            top: 180px;
+            right: 90px;
+        }
+    }
+}
